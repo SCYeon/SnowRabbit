@@ -56,21 +56,19 @@
     <Analyzer Include="C:\Program Files (x86)\Microsoft Visual Studio Tools for Unity\16.0\Analyzers\Microsoft.Unity.Analyzers.dll" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Assets\Zero Rare\Retro Sound Effects\Demo\Demo.cs" />
-    <Compile Include="Assets\PlayerController.cs" />
-    <Compile Include="Assets\PixelMobs\Script\StateRandom.cs" />
-    <Compile Include="Assets\PixelMobs\Script\Intro.cs" />
-    <Compile Include="Assets\PixelMobs\Script\StateRandomOffset.cs" />
-    <Compile Include="Assets\PixelMobs\Script\Mobs.cs" />
-    <Compile Include="Assets\PixelMobs\Script\Ease.cs" />
-    <Compile Include="Assets\2D SD Monster Pack\Scripts\MonsterCharacterAnimation.cs" />
     <Compile Include="Assets\2D SD Monster Pack\Scripts\MonsterActing.cs" />
-    <Compile Include="Assets\PixelMobs\Script\Mob.cs" />
+    <Compile Include="Assets\Zero Rare\Retro Sound Effects\Demo\Demo.cs" />
+    <Compile Include="Assets\cs\PlayerController.cs" />
     <Compile Include="Assets\2D SD Monster Pack\Scripts\MonsterAnimation.cs" />
+    <Compile Include="Assets\2D SD Monster Pack\Scripts\MonsterCharacterAnimation.cs" />
+    <Compile Include="Assets\cs\MobController.cs" />
+    <Compile Include="Assets\cs\FirstSnowController.cs" />
+    <Compile Include="Assets\cs\FirstSnowGenerator.cs" />
+    <Compile Include="Assets\cs\SecondSnowController.cs" />
+    <Compile Include="Assets\cs\SecondSnowGenerator.cs" />
+    <Compile Include="Assets\cs\DangerController.cs" />
   </ItemGroup>
   <ItemGroup>
-     <None Include="Assets\FreePixelFood\ReadMe.txt" />
-     <None Include="Assets\PixelMobs\ReadMe.txt" />
     <Reference Include="UnityEngine">
       <HintPath>D:\UnityHub\2020.2.7f1\Editor\Data\Managed\UnityEngine\UnityEngine.dll</HintPath>
     </Reference>
