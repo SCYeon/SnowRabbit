@@ -9,7 +9,7 @@ EditorBuildSettings:
     path: Assets/Scenes/SampleScene.unity
     guid: 2cda990e2423bbf4892e6590ba056729
   - enabled: 0
-    path: Assets/ClearScene.unity
+    path: 
     guid: 92df228a58b4dee40bf011c1c3f65bd8
   - enabled: 1
     path: Assets/GameScene.unity
@@ -20,4 +20,10 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/EndScene.unity
     guid: a05c1b188f5238e46884025cc4ead7e6
+  - enabled: 1
+    path: Assets/TitleScene.unity
+    guid: 5bd4c80320b99184195a77f1f9c8fae7
+  - enabled: 1
+    path: Assets/GameOverScene.unity
+    guid: 0bcb7325f89f90b4cbfc14e5902bbd18
   m_configObjects: {}

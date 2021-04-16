@@ -52,15 +52,16 @@ public class MobController : MonoBehaviour
         Vector2 p2 = this.player.transform.position;
         Vector2 dir = p1 - p2;
         float d = dir.magnitude;
-        float r1 = 0.5f;
-        float r2 = 1.0f;
+        float r1 = 0.3f;
+        float r2 = 0.3f;
 
-/*hp 채워주는거
- * if (d < r1 + r2)
+        if (d < r1 + r2)
         {
             GameObject director = GameObject.Find("GameDirector");
-            director.GetComponent<GameDirector>().FullHp();
+            director.GetComponent<GameDirector>().DecreaseHP();
+
+            Vector3 playerPos = this.player.transform.position;
+            this.player.transform.Translate(playerPos.x+5.0f, playerPos.y, 0);
         }
-*/
     }
 }

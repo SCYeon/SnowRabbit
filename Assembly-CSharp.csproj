@@ -56,21 +56,23 @@
     <Analyzer Include="C:\Program Files (x86)\Microsoft Visual Studio Tools for Unity\16.0\Analyzers\Microsoft.Unity.Analyzers.dll" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets\cs\GameDirector.cs" />
+    <Compile Include="Assets\cs\ClearDirector.cs" />
     <Compile Include="Assets\cs\DangerController.cs" />
     <Compile Include="Assets\cs\SecondSnowGenerator.cs" />
     <Compile Include="Assets\2D SD Monster Pack\Scripts\MonsterActing.cs" />
     <Compile Include="Assets\cs\MobController.cs" />
     <Compile Include="Assets\Zero Rare\Retro Sound Effects\Demo\Demo.cs" />
+    <Compile Include="Assets\cs\CameraController.cs" />
     <Compile Include="Assets\cs\PlayerController.cs" />
     <Compile Include="Assets\cs\SecondSnowController.cs" />
     <Compile Include="Assets\cs\FirstSnowController.cs" />
     <Compile Include="Assets\2D SD Monster Pack\Scripts\MonsterAnimation.cs" />
     <Compile Include="Assets\cs\FirstSnowGenerator.cs" />
     <Compile Include="Assets\2D SD Monster Pack\Scripts\MonsterCharacterAnimation.cs" />
-    <Compile Include="Assets\cs\GameDirector.cs" />
-    <Compile Include="Assets\cs\CameraController.cs" />
-    <Compile Include="Assets\cs\ClearDirector.cs" />
     <Compile Include="Assets\cs\EndingDirector.cs" />
+    <Compile Include="Assets\cs\StartDirector.cs" />
+    <Compile Include="Assets\cs\StrawberryController.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">

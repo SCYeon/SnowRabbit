@@ -8,6 +8,9 @@ public class GameDirector : MonoBehaviour
     GameObject player;
     GameObject flag;
     GameObject distance;
+    GameObject hpGauge;
+    GameObject strawberry;
+    int count = 0;
 
     // Start is called before the first frame update
     void Start()
@@ -15,6 +18,21 @@ public class GameDirector : MonoBehaviour
         this.player = GameObject.Find("player");
         this.flag = GameObject.Find("flag");
         this.distance = GameObject.Find("Distance");
+        this.strawberry = GameObject.Find("StrawberryCount");
+        this.hpGauge = GameObject.Find("hpGauge");
+    }
+    public void DecreaseHP()
+    {
+        this.hpGauge.GetComponent<Image>().fillAmount -= 0.01f;
+    }
+    public void IncreaseHp()
+    {
+        this.hpGauge.GetComponent<Image>().fillAmount += 0.1f;
+    }
+
+    public void countStrawberry(int count)
+    {
+        this.count = count;
     }
 
     // Update is called once per frame
@@ -26,6 +44,7 @@ public class GameDirector : MonoBehaviour
         float d = dir.magnitude;
 
         float length = this.flag.transform.position.x - this.player.transform.position.x;
-        this.distance.GetComponent<Text>().text = "±ê¹ß±îÁö " + d.ToString("F2") + "m";
+        this.distance.GetComponent<Text>().text = "±ê¹ß±îÁö " + d.ToString("F2") + "m / ";
+        this.strawberry.GetComponent<Text>().text = "Ã£Àº µþ±â: " + this.count + "°³ / HP: ";
     }
 }

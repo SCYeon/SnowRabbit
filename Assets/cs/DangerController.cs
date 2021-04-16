@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class DangerController : MonoBehaviour
 {
@@ -24,6 +25,7 @@ public class DangerController : MonoBehaviour
         if(d < r1 + r2)
         {
             Destroy(player);
+            SceneManager.LoadScene("GameOverScene");
         }
     }
 }
