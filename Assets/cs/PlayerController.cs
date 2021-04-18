@@ -46,7 +46,7 @@ public class PlayerController : MonoBehaviour
 
         if(transform.position.y < -10)
         {
-            SceneManager.LoadScene("GameScene");
+            SceneManager.LoadScene("GameOverScene");
         }
         }
     

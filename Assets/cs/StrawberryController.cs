@@ -30,7 +30,7 @@ public class StrawberryController : MonoBehaviour
             GameObject director = GameObject.Find("GameDirector");
             director.GetComponent<GameDirector>().countStrawberry(strawberryCount);
             director.GetComponent<GameDirector>().IncreaseHp();
-            Destroy(this.strawberry);
+            Destroy(gameObject);
         }
     }
 }

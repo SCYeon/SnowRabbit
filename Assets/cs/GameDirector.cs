@@ -23,7 +23,7 @@ public class GameDirector : MonoBehaviour
     }
     public void DecreaseHP()
     {
-        this.hpGauge.GetComponent<Image>().fillAmount -= 0.01f;
+        this.hpGauge.GetComponent<Image>().fillAmount -= 0.1f;
     }
     public void IncreaseHp()
     {
@@ -32,7 +32,7 @@ public class GameDirector : MonoBehaviour
 
     public void countStrawberry(int count)
     {
-        this.count = count;
+        this.count += count;
     }
 
     // Update is called once per frame
