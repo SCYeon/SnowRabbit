@@ -20,6 +20,34 @@ public class MobController : MonoBehaviour
         this.start = transform.position.x;
     }
 
+    void Hit(bool flags)
+    {
+        //충돌
+        Vector2 p1 = transform.position;
+        Vector2 p2 = this.player.transform.position;
+        Vector2 dir = p1 - p2;
+        float d = dir.magnitude;
+        float r1 = 0.5f;
+        float r2 = 0.5f;
+        float hit = 0;
+
+        if (d < r1 + r2)
+        {
+            GameObject director = GameObject.Find("GameDirector");
+            director.GetComponent<GameDirector>().DecreaseHP();
+
+            Vector2 playerPos = this.player.transform.position;
+            if (flag == true)
+            {
+                hit = playerPos.x - 0.02f;
+            }
+            else if (flag == false)
+            {
+                hit = playerPos.x + 0.02f;
+            }
+            this.player.transform.Translate(hit, playerPos.y, 0);
+        }
+    }
     // Update is called once per frame
     void Update()
     {
@@ -32,11 +60,13 @@ public class MobController : MonoBehaviour
                     {
                         direction = - 0.01f;
                         key = -4;
+                        Hit(flag);
                     }
                     else if (flag == true)
                     {
                         direction = 0.01f;
                         key = 4;
+                        Hit(flag);
                     }
                 }
                 if (transform.position.x <= start - 1.7 || transform.position.x >= start + 1.4)
@@ -55,30 +85,5 @@ public class MobController : MonoBehaviour
                 }
         transform.Translate(direction, 0, 0);
 
-        //충돌
-        Vector2 p1 = transform.position;
-        Vector2 p2 = this.player.transform.position;
-        Vector2 dir = p1 - p2;
-        float d = dir.magnitude;
-        float r1 = 0.5f;
-        float r2 = 0.5f;
-        float hit = 0;
-
-        if (d < r1 + r2)
-        {
-            GameObject director = GameObject.Find("GameDirector");
-            director.GetComponent<GameDirector>().DecreaseHP();
-            
-            Vector2 playerPos = this.player.transform.position;
-            if (playerPos.x < 0)
-            {
-                hit = playerPos.x - 0.05f;
-            }
-            else if(playerPos.x >= 0)
-            {
-                hit = playerPos.x + 0.05f;
-            }
-            this.player.transform.Translate(hit, playerPos.y, 0);
-        }
     }
 }

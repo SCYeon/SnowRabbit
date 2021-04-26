@@ -21,8 +21,8 @@ public class StrawberryController : MonoBehaviour
         Vector2 p2 = this.player.transform.position;
         Vector2 dir = p1 - p2;
         float d = dir.magnitude;
-        float r1 = 0.5f;
-        float r2 = 1.0f;
+        float r1 = 0.3f;
+        float r2 = 0.3f;
 
         if (d < r1 + r2)
         {

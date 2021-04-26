@@ -59,10 +59,12 @@
     <Compile Include="Assets\cs\GameDirector.cs" />
     <Compile Include="Assets\cs\ClearDirector.cs" />
     <Compile Include="Assets\cs\DangerController.cs" />
+    <Compile Include="Assets\cs\StrawberryGenerator.cs" />
     <Compile Include="Assets\cs\StrawberryController.cs" />
     <Compile Include="Assets\cs\SecondSnowGenerator.cs" />
     <Compile Include="Assets\2D SD Monster Pack\Scripts\MonsterActing.cs" />
     <Compile Include="Assets\cs\MobController.cs" />
+    <Compile Include="Assets\cs\EnemyGenerator.cs" />
     <Compile Include="Assets\Zero Rare\Retro Sound Effects\Demo\Demo.cs" />
     <Compile Include="Assets\cs\CameraController.cs" />
     <Compile Include="Assets\cs\PlayerController.cs" />
@@ -73,8 +75,8 @@
     <Compile Include="Assets\2D SD Monster Pack\Scripts\MonsterCharacterAnimation.cs" />
     <Compile Include="Assets\cs\EndingDirector.cs" />
     <Compile Include="Assets\cs\StartDirector.cs" />
-    <Compile Include="Assets\cs\EnemyGenerator.cs" />
-    <Compile Include="Assets\cs\StrawberryGenerator.cs" />
+    <Compile Include="Assets\cs\SnowBulletController.cs" />
+    <Compile Include="Assets\cs\SnowBulletGenerator.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">

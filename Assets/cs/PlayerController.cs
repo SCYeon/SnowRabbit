@@ -44,6 +44,12 @@ public class PlayerController : MonoBehaviour
 
         this.animator.speed = speedx / 2.0f;
 
+        if (Input.GetKeyDown(KeyCode.Z))
+        {
+            GameObject bullet = GameObject.Find("SnowBulletGenerator");
+            bullet.GetComponent<SnowBulletGenerator>().Shot(key);
+        }
+
         if(transform.position.y < -10)
         {
             SceneManager.LoadScene("GameOverScene");

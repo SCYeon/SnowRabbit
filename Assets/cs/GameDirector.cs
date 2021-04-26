@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class GameDirector : MonoBehaviour
 {
@@ -24,6 +25,11 @@ public class GameDirector : MonoBehaviour
     public void DecreaseHP()
     {
         this.hpGauge.GetComponent<Image>().fillAmount -= 0.1f;
+        if(this.hpGauge.GetComponent<Image>().fillAmount == 0)
+        {
+            Destroy(player);
+            SceneManager.LoadScene("GameOverScene");
+        }
     }
     public void IncreaseHp()
     {

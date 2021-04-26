@@ -310,7 +310,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 1
+  m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 41cbc6eb1c4369b41b7a1d543a645a42, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -492,7 +492,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 1
+  m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 66b19e70d0596b8488f78c3b6ddcd334, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -664,7 +664,7 @@ GameObject:
   - component: {fileID: 1465237104}
   - component: {fileID: 1465237103}
   m_Layer: 0
-  m_Name: SnowGenerator
+  m_Name: FirstSnowGenerator
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -679,10 +679,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 1465237102}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 45d69cba637c96f4bbdf50184e162dbc, type: 3}
+  m_Script: {fileID: 11500000, guid: 0da0f3e3a68566f418fb53d08cfea8e3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  secondSnowPrefab: {fileID: 9156321869408108394, guid: cc458e25443a2a143ac5f6ea58ebdad0, type: 3}
+  firstSnowPrefab: {fileID: 4009252722002627431, guid: 3bb91e38ee6ff9642802990b15cac6e3, type: 3}
 --- !u!4 &1465237104
 Transform:
   m_ObjectHideFlags: 0
@@ -696,6 +696,50 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 5
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1492519118
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1492519120}
+  - component: {fileID: 1492519119}
+  m_Layer: 0
+  m_Name: SecondSnowGenerator
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1492519119
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1492519118}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 45d69cba637c96f4bbdf50184e162dbc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  secondSnowPrefab: {fileID: 9156321869408108394, guid: cc458e25443a2a143ac5f6ea58ebdad0, type: 3}
+--- !u!4 &1492519120
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1492519118}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 1.5609027, y: -1.6653676, z: 34.76472}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1685165490
 GameObject:
@@ -1030,7 +1074,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: -1
   m_Sprite: {fileID: 21300000, guid: 1f1009694d818254da34e748ba61ef59, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
