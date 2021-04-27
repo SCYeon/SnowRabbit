@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class SnowBulletController : MonoBehaviour
 {
-    int key = 0; 
+    int key = 0;
     GameObject player;
     float moveSpeed = 30.0f;
 

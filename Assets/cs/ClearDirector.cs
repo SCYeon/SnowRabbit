@@ -10,7 +10,7 @@ public class ClearDirector : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        this.player = GameObject.Find("player");
+        this.player = GameObject.Find("bigPlayer");
     }
 
     // Update is called once per frame

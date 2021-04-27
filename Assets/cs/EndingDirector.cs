@@ -15,6 +15,6 @@ public class EndingDirector : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        this.ending.GetComponent<Text>().text = "Game Clear!! \n클릭하여 타이틀로 되돌아가기";
+        this.ending.GetComponent<Text>().text = "Game Clear!! \n눈토끼가 모험을 성공적으로 마쳤습니다! \n\n>>Click<<";
     }
 }

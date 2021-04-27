@@ -10,11 +10,11 @@ EditorBuildSettings:
     guid: 2cda990e2423bbf4892e6590ba056729
   - enabled: 0
     path: 
-    guid: 92df228a58b4dee40bf011c1c3f65bd8
+    guid: 00000000000000000000000000000000
   - enabled: 1
     path: Assets/GameScene.unity
     guid: c6fe32a491312aa45bf331e9d14a213e
-  - enabled: 1
+  - enabled: 0
     path: Assets/SecondScene.unity
     guid: fa9dd7ccbe6b3554da90b2835a8bc106
   - enabled: 1
@@ -26,4 +26,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/GameOverScene.unity
     guid: 0bcb7325f89f90b4cbfc14e5902bbd18
+  - enabled: 1
+    path: Assets/OperateScene.unity
+    guid: d050b8933df0d934db41bf1053de7225
   m_configObjects: {}

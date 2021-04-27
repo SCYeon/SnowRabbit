@@ -7,6 +7,7 @@ public class PlayerController : MonoBehaviour
 {
     Rigidbody2D rigid2D;
     Animator animator;
+    int trigger;
     float jumpForce = 580.0f;
     float walkForce = 30.0f;
     float maxWalkSpeed = 2.0f;
@@ -47,21 +48,26 @@ public class PlayerController : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.Z))
         {
             GameObject bullet = GameObject.Find("SnowBulletGenerator");
-            bullet.GetComponent<SnowBulletGenerator>().Shot(key);
+            bullet.GetComponent<SnowBulletGenerator>().Shot();
         }
 
-        if(transform.position.y < -10)
+        if (transform.position.y < -10)
         {
             SceneManager.LoadScene("GameOverScene");
         }
+
+        this.trigger = GameObject.Find("GameDirector").GetComponent<GameDirector>().count;
         }
     
-    void OnTriggerEnter2D(Collider2D other)
+    public void OnTriggerEnter2D(Collider2D other)
     {
-        if (other.gameObject.tag == "Finish")
+        if(trigger == 0)
         {
-            Debug.Log("°ñ");
-            SceneManager.LoadScene("EndScene");
+            if (other.gameObject.tag == "Finish")
+            {
+                Debug.Log("°ñ");
+                SceneManager.LoadScene("EndScene");
+            }
         }
     }
 }

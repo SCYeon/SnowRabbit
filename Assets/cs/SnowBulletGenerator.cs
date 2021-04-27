@@ -12,7 +12,7 @@ public class SnowBulletGenerator : MonoBehaviour
         this.player = GameObject.Find("player");
     }
 
-    public void Shot(int key)
+    public void Shot()
     {
         GameObject instance = Instantiate(SnowBulletPrefab) as GameObject;
         instance.transform.position = new Vector3(this.player.transform.position.x, this.player.transform.position.y, 0);

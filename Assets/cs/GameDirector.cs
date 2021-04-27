@@ -11,7 +11,7 @@ public class GameDirector : MonoBehaviour
     GameObject distance;
     GameObject hpGauge;
     GameObject strawberry;
-    int count = 0;
+    public int count = 4;
 
     // Start is called before the first frame update
     void Start()
@@ -38,7 +38,7 @@ public class GameDirector : MonoBehaviour
 
     public void countStrawberry(int count)
     {
-        this.count += count;
+        this.count -= count;
     }
 
     // Update is called once per frame
@@ -51,6 +51,6 @@ public class GameDirector : MonoBehaviour
 
         float length = this.flag.transform.position.x - this.player.transform.position.x;
         this.distance.GetComponent<Text>().text = "깃발까지 " + d.ToString("F2") + "m / ";
-        this.strawberry.GetComponent<Text>().text = "찾은 딸기: " + this.count + "개 / HP: ";
+        this.strawberry.GetComponent<Text>().text = "찾아야 하는 딸기: " + this.count + "개 / HP: ";
     }
 }
