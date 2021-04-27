@@ -11,7 +11,7 @@ public class SnowBulletController : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        this.player = GameObject.Find("player"); 
+        this.player = GameObject.Find("player");
         if (this.player.transform.localScale.x == -1) key = -1;
         else key = 1;
     }

@@ -8,7 +8,9 @@ public class MobController : MonoBehaviour
     Animator animator;
     bool flag = false;
     GameObject player;
+    GameObject bullet;
     float start = 0;
+    int hp = 0;
 
     // Start is called before the first frame update
     void Start()
@@ -16,7 +18,7 @@ public class MobController : MonoBehaviour
         this.rigid2D = GetComponent<Rigidbody2D>();
         this.animator = GetComponent<Animator>();
         this.player = GameObject.Find("player");
-
+        this.bullet = GameObject.Find("bulletGenerator");
         this.start = transform.position.x;
     }
 
@@ -84,6 +86,18 @@ public class MobController : MonoBehaviour
                     transform.localScale = new Vector3(key, 4, 1);
                 }
         transform.Translate(direction, 0, 0);
-
+    }
+    void OnTriggerEnter2D(Collider2D other)
+    {
+        if (other.gameObject.tag == "bullet")
+        {
+            Debug.Log("shot");
+            hp++;
+            Destroy(other.gameObject);
+            if (hp == 5)
+            {
+                Destroy(gameObject);
+            }
+        }
     }
 }

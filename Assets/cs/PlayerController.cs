@@ -58,7 +58,10 @@ public class PlayerController : MonoBehaviour
     
     void OnTriggerEnter2D(Collider2D other)
     {
-        Debug.Log("°ñ");
-        SceneManager.LoadScene("EndScene");
+        if (other.gameObject.tag == "Finish")
+        {
+            Debug.Log("°ñ");
+            SceneManager.LoadScene("EndScene");
+        }
     }
 }
